@@ -21,7 +21,7 @@ function App() {
         <header className="max-w-7xl mx-auto relative text-center">
           <h1 className="mb-4">
             <span className="text-5xl sm:text-7xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-clip-text text-transparent bg-size-200 animate-gradient">
-              Pryx
+              Zeroledger
             </span>
           </h1>
           <h2 className="text-4xl sm:text-6xl font-bold mb-4">
@@ -30,26 +30,36 @@ function App() {
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Experience fast, non-custodial transfers across chains with strong
+            Programmable, trustless zk-based transfers with strong
             confidentiality and flexible compliance.
           </p>
           <nav className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 w-full max-w-[320px] md:max-w-md mx-auto">
-            <a
-              href="https://www.notion.so/Whitepaper-1f2fc244eb5b806ea1f7ed5be677c8b9?pvs=4"
-              target="_blank"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
+            <button
+              disabled
+              className="w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
             >
-              <DocumentTextIcon className="h-5 w-5 mr-2" />
-              Whitepaper
-            </a>
-            <a
-              href="https://app.pryx.cash"
-              target="_blank"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
+              <a
+                href="https://www.notion.so/Whitepaper-1f2fc244eb5b806ea1f7ed5be677c8b9?pvs=4"
+                target="_blank"
+                className="flex items-center justify-center"
+              >
+                <DocumentTextIcon className="h-5 w-5 mr-2" />
+                Whitepaper
+              </a>
+            </button>
+            <button
+              disabled
+              className="w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
             >
-              <CodeBracketIcon className="h-5 w-5 mr-2" />
-              Try Demo
-            </a>
+              <a
+                href="https://app.pryx.cash"
+                target="_blank"
+                className="flex items-center justify-center"
+              >
+                <CodeBracketIcon className="h-5 w-5 mr-2" />
+                Try Demo
+              </a>
+            </button>
           </nav>
         </header>
       </motion.section>
@@ -76,30 +86,25 @@ function App() {
                 Strong Confidentiality
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                UTXO-like model with masked Notes and Merkle-based structures
-                for enhanced privacy and security.
+                Transaction amounts privacy powered by zk-SNARKs.
               </p>
             </li>
 
             <li className="p-6 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
               <BoltIcon className="h-10 w-10 text-purple-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">
-                Low On-Chain Overhead
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Lightweight & Fast</h3>
               <p className="text-gray-300 leading-relaxed">
-                Efficient off-chain transfers with minimal blockchain footprint
-                for optimal performance.
+                Simple use-case specific zk-proofs generated on client side
+                within 1-2 seconds.
               </p>
             </li>
 
             <li className="p-6 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
               <ArrowsRightLeftIcon className="h-10 w-10 text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-3">
-                Cross-Chain Operability
-              </h3>
+              <h3 className="text-xl font-semibold mb-3">Programmable</h3>
               <p className="text-gray-300 leading-relaxed">
-                Seamless cross-chain transactions with hashlock logic and
-                fraud-proof mechanisms.
+                Native meta-transactions enable complex use cases like escrows,
+                batch operations, and custom payment flows.
               </p>
             </li>
           </ul>
@@ -127,7 +132,7 @@ function App() {
             </li>
 
             <li className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Pryx. All rights reserved.
+              &copy; {new Date().getFullYear()} Zeroledger. All rights reserved.
             </li>
           </ul>
         </motion.nav>
