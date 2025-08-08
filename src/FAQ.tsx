@@ -1,12 +1,8 @@
 import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
-import { faqData } from "./faq.data";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import faqData from "./faq.data.json";
+import { Disclosure, DisclosureButton } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 
 export const FAQ = () => {
   return (
@@ -17,7 +13,7 @@ export const FAQ = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative transition-all duration-500 ease-in-out h-auto">
         <header className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             Frequently Asked Questions
@@ -39,38 +35,37 @@ export const FAQ = () => {
             >
               <Disclosure>
                 {({ open }) => (
-                  <>
+                  <div>
                     <DisclosureButton className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200 rounded-2xl group">
                       <h3 className="text-lg font-semibold text-white pr-4">
                         {faq.question}
                       </h3>
                       <ChevronDownIcon
-                        className={`h-5 w-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${
-                          open ? "rotate-180 text-blue-500" : ""
-                        }`}
+                        className={clsx(
+                          "h-5 w-5 text-gray-400 flex-shrink-0 transition-transform ease-in-out duration-200",
+                          open ? "rotate-180 text-blue-500" : "",
+                        )}
                       />
                     </DisclosureButton>
-                    <AnimatePresence>
-                      {open && (
-                        <DisclosurePanel static as={motion.div}>
-                          <motion.div
-                            className="px-6 pb-4"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{
-                              duration: 0.3,
-                              ease: "easeInOut",
-                            }}
-                          >
-                            <p className="text-gray-300 leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </motion.div>
-                        </DisclosurePanel>
+                    <div
+                      className={clsx(
+                        "transition-all duration-500 ease-in-out overflow-hidden",
+                        open ? "max-h-120 opacity-100" : "max-h-0 opacity-0",
                       )}
-                    </AnimatePresence>
-                  </>
+                    >
+                      <div
+                        className={clsx(
+                          "px-6 py-4 text-gray-300 leading-relaxed grid grid-cols-1",
+                        )}
+                      >
+                        {faq.answer.map((ph, index) => (
+                          <p className={clsx("col-span-1")} key={index}>
+                            {ph}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 )}
               </Disclosure>
             </motion.div>

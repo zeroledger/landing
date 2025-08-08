@@ -1,0 +1,96 @@
+[
+  {
+    "question": "What is ZeroLedger?",
+    "answer": [
+      "ZeroLedger is a payment protocol on any EVM-compatible chain that hides transaction amounts but preserves transaction traceability. It uses a lightweight UTXO model backed by a universal Plonk proving system, with several constraint systems covering every practical input-output pattern."
+    ]
+  },
+  {
+    "question": "How does privacy work in ZeroLedger?",
+    "answer": [
+      "The wallet operates with commitments—a Poseidon Hash of token amounts and a random number. All unspent commitments and their owners are stored on the public ledger (evm contract)",
+      "During the transaction, the user generates a proof that ensures transaction validity (inputs = outputs + fee), while keeping the actual values confidential. Along with proof, the transaction also includes encrypted metadata that the recipient can use to update their balance later."
+    ]
+  },
+  {
+    "question": "What networks does ZeroLedger support?",
+    "answer": [
+      "ZeroLedger operates on any EVM-compatible chain. Currently, it's deployed on Optimism Sepolia testnet, but the protocol is designed to be network-agnostic and can be deployed on other EVM-compatible networks. The system is composable with ERC-20 tokens and account-abstraction wallets."
+    ]
+  },
+  {
+    "question": "How do I get started with ZeroLedger?",
+    "answer": [
+      "To get started, connect your wallet (MetaMask, Coinbase Wallet, or other supported wallets), set up a password for your view account, and authorize it. You can then deposit funds (which creates three confidential commitments), make private transfers using various spend patterns (1-1, 1-2, 2-1, etc.), and withdraw when needed. Zeroledger app uses meta-transactions for gas abstraction and batching."
+    ]
+  },
+  {
+    "question": "What is a view account?",
+    "answer": [
+      "A view account is a special account derived from the main wallet account for transaction metadata encryption and decryption. It's created during registration and requires your password to access. This ensures only you and those who hold private keys for your View Account can see your private balance and transaction details."
+    ]
+  },
+  {
+    "question": "How fast are transactions?",
+    "answer": [
+      "ZeroLedger generates zk-proofs on the client side with varying speeds depending on the transaction type: ",
+      "- Fast (less than 2 seconds): 1-3 deposit, 1-1 spend, 1-2 spend, 2-1 spend.",
+      "- Medium (2-2.5 sec): 3-1 spend, 1-3 spend, 2-2 spend, 2-3 spend, 3-2 spend.",
+      "- Slow (> 3 sec): 16-1 aggregation (9.0s)."
+    ]
+  },
+  {
+    "question": "What tokens can I use?",
+    "answer": [
+      "ZeroLedger supports any ERC-20 token on EVM-compatible chains. Currently, it's deployed with Mock USD token on the Optimism Sepolia testnet. The system is token-agnostic and can support additional tokens through the same protocol contracts."
+    ]
+  },
+  {
+    "question": "Is ZeroLedger secure?",
+    "answer": [
+      "Yes, ZeroLedger uses state-of-the-art cryptography including zk-SNARKs for privacy and security. Your private keys remain in your wallet, and the system uses zero-knowledge proofs to ensure transaction validity without revealing sensitive information. The protocol prevents double-spend vectors without introducing Merkle trees or nullifiers since all commitments are stored in onchain map."
+    ]
+  },
+  {
+    "question": "Can I use ZeroLedger on mobile?",
+    "answer": [
+      "Yes, ZeroLedger is fully responsive and works on mobile browser. You can connect mobile wallets like MetaMask mobile or use WalletConnect to interact with the application."
+    ]
+  },
+  {
+    "question": "How do deposits and withdrawals work?",
+    "answer": [
+      "Deposits transform public token amounts into three confidential commitments using zero-knowledge proofs. Withdrawals reveal a single commitment's plaintext by supplying the tuple (commitment, amount, randomness) and transfer the amount minus fees to the recipient's public address."
+    ]
+  },
+  {
+    "question": "What are meta-transactions?",
+    "answer": [
+      "The idea of meta-transactions is simple: a third party, called a Relayer, sends the transaction on behalf of the user and pays for the gas fees. ZeroLedger embeds meta-transactions for gas fee abstraction and atomic multiple transaction execution in a single batch. The ZeroLedger DAO defines a floor fee for each operation and whitelist paymasters."
+    ]
+  },
+  {
+    "question": "How do I get test tokens?",
+    "answer": [
+      "You can use the built-in faucet feature to get test USD tokens. Simply click the 'Faucet' button in the menu tab, and you'll receive a random amount of test tokens to try out the system."
+    ]
+  },
+  {
+    "question": "What is TES?",
+    "answer": [
+      "TES (Trusted Encryption Service) is a backend service that handles encryption and decryption of private transaction data for users who have not yet registered their View Accounts in the protocol. It uses trusted encryption tokens and can decrypt commitments which were encrypted using these tokens instead of the recipient's View Account public keys"
+    ]
+  },
+  {
+    "question": "How does compliance work?",
+    "answer": [
+      "ZeroLedger maintains compliance through public sender and receiver addresses, allowing chain-analysis firms to trace provenance. Relayers screen transactions against OFAC lists. For regulated custodians, the contract exposes an optional view key where note creators can reveal (amount, randomness) to auditors without compromising other notes."
+    ]
+  },
+  {
+    "question": "What are the advanced privacy options?",
+    "answer": [
+      "Beyond hiding transaction values, ZeroLedger supports advanced privacy techniques including EIP-5564 stealth addresses, zero-value commitments to randomly chosen addresses (decoy commitments), and payment proxies secured by Conditional HTLC. These extensions provide deeper privacy for enterprises that need to conceal transaction graph analysis and will be implemented later."
+    ]
+  }
+]
