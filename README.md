@@ -1,4 +1,4 @@
-Pryx Landing
+Zeroledger Landing
 
 ## Installation
 

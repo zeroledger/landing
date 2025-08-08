@@ -1,17 +1,17 @@
 {
   "name": "landing",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.1",
+  "description": "zeroledger landing page",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pryx-protocol/landing.git"
+    "url": "git+https://github.com/zeroledger/landing.git"
   },
   "bugs": {
-    "url": "https://github.com/pryx-protocol/landing/issues"
+    "url": "https://github.com/zeroledger/landing/issues"
   },
-  "homepage": "https://github.com/pryx-protocol/landing#readme",
+  "homepage": "https://github.com/zeroledger/landing#readme",
   "keywords": [
-    "pryx",
+    "zeroledger",
     "web3",
     "landing",
     "payments",
