@@ -25,32 +25,22 @@ export const Hero = () => {
           and flexible compliance.
         </p>
         <nav className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 w-full max-w-[320px] md:max-w-md mx-auto">
-          <button
-            disabled
-            className="w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
+          <a
+            href="#"
+            target="_blank"
+            className="flex items-center justify-center w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200 pointer-events-none opacity-30"
           >
-            <a
-              href="https://www.notion.so/Whitepaper-1f2fc244eb5b806ea1f7ed5be677c8b9?pvs=4"
-              target="_blank"
-              className="flex items-center justify-center"
-            >
-              <DocumentTextIcon className="h-5 w-5 mr-2" />
-              Whitepaper
-            </a>
-          </button>
-          <button
-            disabled
-            className="w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
+            <DocumentTextIcon className="h-5 w-5 mr-2" />
+            Whitepaper
+          </a>
+          <a
+            href="https://app.pryx.cash"
+            target="_blank"
+            className="flex items-center justify-center w-full px-6 py-4 border border-gray-600 text-base font-medium rounded-lg text-white hover:bg-gray-800/50 transition-all duration-200"
           >
-            <a
-              href="https://app.pryx.cash"
-              target="_blank"
-              className="flex items-center justify-center"
-            >
-              <CodeBracketIcon className="h-5 w-5 mr-2" />
-              Try Demo
-            </a>
-          </button>
+            <CodeBracketIcon className="h-5 w-5 mr-2" />
+            Try Demo
+          </a>
         </nav>
       </header>
     </motion.section>

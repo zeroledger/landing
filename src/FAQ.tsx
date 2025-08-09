@@ -26,12 +26,9 @@ export const FAQ = () => {
 
         <div className="space-y-4">
           {faqData.map((faq, index) => (
-            <motion.div
+            <div
               key={index}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Disclosure>
                 {({ open }) => (
@@ -68,7 +65,7 @@ export const FAQ = () => {
                   </div>
                 )}
               </Disclosure>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
