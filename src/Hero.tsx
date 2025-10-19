@@ -17,12 +17,11 @@ export const Hero = () => {
         </h1>
         <h2 className="text-lg xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
           <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 bg-clip-text text-transparent bg-size-200 animate-gradient">
-            Private Programmable Payments
+            Private everyday crypto payments
           </span>
         </h2>
         <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
-          Build and transact with onchain ledger that keeps transactions private
-          without mixing
+          Instant, affordable, and compliant by design
         </p>
         <nav className="flex flex-row justify-center space-x-2 sm:space-x-3 md:space-x-4 w-full max-w-[240px] sm:max-w-[280px] md:max-w-sm mx-auto">
           <a
