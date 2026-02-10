@@ -16,19 +16,19 @@ export const Footer = () => {
             <a
               href="https://t.me/+fCgwViQAehY0NTEy"
               target="_blank"
-              className="inline-flex items-center text-gray-300 hover:text-white transition-colors duration-200 p-2"
+              className="inline-flex items-center text-[#E8E8E8]/70 hover:text-[#00E0B0] transition-colors duration-200 p-2"
             >
               <TelegramIcon className="h-6 w-6 sm:h-7 sm:w-7" />
             </a>
             <a
               href="https://x.com/zeroledgerxyz"
               target="_blank"
-              className="inline-flex items-center text-gray-300 hover:text-white transition-colors duration-200 p-2"
+              className="inline-flex items-center text-[#E8E8E8]/70 hover:text-[#00E0B0] transition-colors duration-200 p-2"
             >
               <XIcon className="h-5 w-5 sm:h-6 sm:w-6" />
             </a>
           </li>
-          <li className="text-gray-400 text-xs sm:text-sm text-center px-4">
+          <li className="text-[#E8E8E8]/60 text-xs sm:text-sm text-center px-4">
             &copy; {new Date().getFullYear()} Zeroledger. All rights reserved.
           </li>
         </ul>
