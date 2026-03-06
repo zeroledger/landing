@@ -16,11 +16,11 @@ export const Hero = () => {
           </span>
         </h1>
         <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#E8E8E8]">
-          Private crypto payments for everyone
+          Your everyday digital cash
         </h2>
-        <p className="text-base sm:text-lg text-[#E8E8E8]/80 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
-          Hide amounts and value flow. Stay traceable. No mixing.
-        </p>
+        {/* <p className="text-base sm:text-lg text-[#E8E8E8]/80 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-2">
+          Stablecoin payments with privacy and traceability.
+        </p> */}
         <nav className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto">
           <a
             href="https://app.zeroledger.wtf"

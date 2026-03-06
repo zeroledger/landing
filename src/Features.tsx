@@ -48,10 +48,10 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative pt-6 pb-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
