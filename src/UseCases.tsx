@@ -3,7 +3,9 @@ import {
   UserGroupIcon,
   DocumentDuplicateIcon,
   ArrowsRightLeftIcon,
-  CurrencyDollarIcon,
+  ChartBarSquareIcon,
+  BanknotesIcon,
+  ArrowPathIcon,
 } from "@heroicons/react/24/outline";
 
 const useCases = [
@@ -20,7 +22,13 @@ const useCases = [
     available: true,
   },
   {
-    icon: CurrencyDollarIcon,
+    icon: ChartBarSquareIcon,
+    title: "Savings",
+    description: "Earn yield on your balance.",
+    available: true,
+  },
+  {
+    icon: BanknotesIcon,
     title: "Cash In/Out",
     description: "Connect to traditional payments privately.",
     available: false,
@@ -28,14 +36,20 @@ const useCases = [
   {
     icon: ArrowsRightLeftIcon,
     title: "Complex Payments",
-    description: "Enable escrows, conditional transfers, and atomic swaps.",
+    description: "Escrows, conditional transfers and agentic payments.",
+    available: false,
+  },
+  {
+    icon: ArrowPathIcon,
+    title: "Cross-chain payments",
+    description: "Private atomic payments between different blockchains.",
     available: false,
   },
 ];
 
 export const UseCases = () => {
   return (
-    <section className="relative py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 sm:py-16 px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -49,7 +63,7 @@ export const UseCases = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (
             <motion.div
               key={useCase.title}

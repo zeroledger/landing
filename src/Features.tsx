@@ -24,7 +24,8 @@ const features = [
   {
     icon: BoltIcon,
     title: "Instant & affordable",
-    description: "Settle in 2-3 seconds for a fraction of a penny.",
+    description:
+      "Settle in 2-3 seconds for a fraction of a penny. Earn yield on your balance.",
   },
   {
     icon: DocumentTextIcon,
