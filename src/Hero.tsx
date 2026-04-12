@@ -23,7 +23,7 @@ export const Hero = () => {
         </p> */}
         <nav className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto">
           <a
-            href="https://app.zeroledger.wtf"
+            href="https://stg-app.zeroledger.wtf"
             target="_blank"
             className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-[#00E0B0] text-[#1A1C22] text-sm sm:text-base font-semibold rounded-md hover:bg-[#00F0C0] transform hover:scale-105 transition-all duration-200 shadow-lg shadow-[#00E0B0]/20"
           >
