@@ -43,7 +43,7 @@ export const CTA = () => {
             </div>
 
             <p className="mt-6 text-sm text-[#E8E8E8]/50">
-              Currently available on Base Sepolia testnet
+              Currently available on Base L2 network
             </p>
           </div>
         </div>
