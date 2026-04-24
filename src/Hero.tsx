@@ -11,8 +11,13 @@ export const Hero = () => {
     >
       <header className="mx-auto relative text-center">
         <h1 className="mb-3 sm:mb-4">
-          <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#00E0B0] via-[#00F0C0] to-[#00E0B0] bg-clip-text text-transparent bg-size-200 animate-gradient">
-            ZeroLedger
+          <span className="relative inline-block">
+            <span className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#00E0B0] via-[#00F0C0] to-[#00E0B0] bg-clip-text text-transparent bg-size-200 animate-gradient">
+              ZeroLedger
+            </span>
+            <span className="absolute -top-1 -right-10 inline-flex rotate-20 items-center rounded-full border border-[#00E0B0]/40 bg-[#00E0B0]/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#00E0B0]">
+              Live on Base
+            </span>
           </span>
         </h1>
         <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-[#E8E8E8]">
@@ -23,7 +28,7 @@ export const Hero = () => {
         </p> */}
         <nav className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto">
           <a
-            href="https://stg-app.zeroledger.wtf"
+            href="https://app.zeroledger.wtf"
             target="_blank"
             className="flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-[#00E0B0] text-[#1A1C22] text-sm sm:text-base font-semibold rounded-md hover:bg-[#00F0C0] transform hover:scale-105 transition-all duration-200 shadow-lg shadow-[#00E0B0]/20"
           >
